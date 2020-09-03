@@ -1,0 +1,26 @@
+ part_id | ticket_id | model_id |     serial_num      | quantity | part_price 
+---------+-----------+----------+---------------------+----------+------------
+       1 |         1 |        2 | AQ4P-5RNQ-ZBDH-B76L |        1 |     105.14
+       2 |         3 |        1 | NMXF-WGXG-D24B-YUQR |        1 |     255.58
+       3 |         4 |       12 | Z3XB-4EEA-PCEN-HUWS |        1 |      60.79
+       4 |         5 |        4 | 98SG-84TT-ZWEE-N8SS |        1 |     155.27
+       5 |         6 |       17 | TALY-7WP9-BLPK-LGY4 |        1 |      85.99
+       6 |         7 |        9 | TS6E-4FAX-4S6R-UDL7 |        1 |     129.55
+       7 |         8 |        7 | GEJT-ZHU7-WT83-PR8A |        1 |      55.99
+       8 |        10 |        6 | JMYH-TSEJ-4WRR-RC9B |        1 |     178.99
+       9 |        11 |       17 | 8CU4-9KHQ-QH44-DFNL |        1 |     102.08
+      10 |        12 |        5 | C29M-39BQ-FLGJ-97KB |        1 |     799.15
+      11 |        13 |       12 | X4ME-W78U-JNXQ-YF96 |        1 |      66.99
+      12 |        14 |       17 | VK6Z-G4EE-U2UG-L7PS |        1 |     105.14
+      13 |        17 |        6 | C44U-YMLR-BH6P-7TYU |        1 |     102.19
+      14 |        18 |       12 | TL9R-4SA4-CUDJ-26DH |        1 |      65.54
+      15 |        19 |        4 | YC85-YYX2-RR68-VVBW |        1 |     135.94
+      16 |        20 |       17 | G4EP-QA3A-FQZV-Y3HH |        1 |     109.24
+      17 |        24 |        1 | 9RLX-6XH4-EZA6-4RRK |        1 |     245.99
+      18 |        25 |        9 | 7MXY-HXEK-ZS43-ZJWU |        1 |     125.25
+      19 |        26 |        5 | HPU3-J34J-E5LY-GN9J |        1 |     805.37
+      20 |        27 |        9 | 9YGV-WMJH-MMWF-WQNU |        1 |     125.25
+      21 |        29 |        7 | EKB2-GM28-62WS-SJLC |        1 |      50.29
+      22 |        31 |        5 | EKWB-FX28-78WS-MXPW |        1 |     520.95
+(22 rows)
+

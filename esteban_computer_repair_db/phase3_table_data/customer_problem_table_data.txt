@@ -1,0 +1,35 @@
+ problem_id | comp_id | emp_id | examine_date |                                                description                                                
+------------+---------+--------+--------------+-----------------------------------------------------------------------------------------------------------
+          1 |       1 |     10 | 2015-03-01   | My computer crashes every time I try to COMPLETED a program then a blue screen with an error code appears
+          2 |       2 |      6 | 2015-03-03   | Random ads pop up all over the screen whenever I try using Chrome and it slows down my computer
+          3 |       3 |      8 | 2015-03-04   | Computer won't turn on but the fans and lights turn on
+          4 |       4 |      6 | 2015-03-12   | Screen went black when I was playing video games and now it won't turn on at all
+          5 |       5 |      5 | 2015-03-15   | There is a program asking for money every time I start my computer
+          6 |       6 |      1 | 2015-03-18   | Computer freezes when I log into my Windows 8 account
+          7 |       7 |      7 | 2015-03-20   | Computer randomly showed an error on screen saying something was wrong with some components
+          8 |       8 |      3 | 2015-03-25   | Every time I store new files in my PC they become corrupted
+          9 |       9 |      1 | 2015-03-01   | PC no longer boots to Windows screen and a black screen with boot options shows up
+         10 |      10 |      5 | 2015-03-27   | Computer or monitor does not detect any video output from video card.
+         11 |      11 |      9 | 2015-03-29   | My computer crashes every time I try to COMPLETED a program then a blue screen with an error code appears
+         12 |      12 |      3 | 2015-03-28   | Random ads pop up all over the screen whenever I try using Chrome and it slows down my computer
+         13 |      13 |      2 | 2015-03-31   | Computer won't turn on but the fans and lights turn on
+         14 |      14 |      8 | 2015-04-05   | Screen went black when I was playing video games and now it won't turn on at all
+         15 |      15 |      4 | 2015-04-06   | There is a program asking for money every time I start my computer
+         16 |      16 |      1 | 2015-04-06   | Computer freezes when I log into my Windows 8 account
+         17 |      17 |      9 | 2015-04-09   | Computer randomly showed an error on screen saying something was wrong with some components
+         18 |      18 |      4 | 2015-04-08   | Every time I store new files in my PC they become corrupted
+         19 |      19 |      4 | 2015-04-09   | PC no longer boots to Windows screen and a black screen with boot options shows up
+         20 |      20 |      9 | 2015-04-10   | Computer or monitor does not detect any video output from video card.
+         21 |      21 |      3 | 2015-04-11   | My computer crashes every time I try to COMPLETED a program then a blue screen with an error code appears
+         22 |      22 |      8 | 2015-04-14   | Random ads pop up all over the screen whenever I try using Chrome and it slows down my computer
+         23 |      23 |      3 | 2015-04-16   | Computer won't turn on but the fans and lights turn on
+         24 |      24 |      4 | 2015-04-16   | Screen went black when I was playing video games and now it won't turn on at all
+         25 |      25 |      7 | 2015-04-18   | There is a program asking for money every time I start my computer
+         26 |      26 |      6 | 2015-04-21   | Computer freezes when I log into my Windows 8 account
+         27 |      27 |      6 | 2015-04-24   | Computer randomly showed an error on screen saying something was wrong with some components
+         28 |      28 |      1 | 2015-04-23   | Every time I store new files in my PC they become corrupted
+         29 |      29 |      1 | 2015-04-26   | PC no longer boots to Windows screen and a black screen with boot options shows up
+         30 |      30 |      9 | 2015-04-25   | Computer or monitor does not detect any video output from video card.
+         31 |      31 |      7 | 2015-04-26   | Screen went black when I was playing video games and now it won't turn on at all
+(31 rows)
+

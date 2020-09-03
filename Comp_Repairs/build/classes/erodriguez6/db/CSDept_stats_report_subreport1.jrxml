@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CSDept_stats_report_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="af80333f-45e9-4880-a7e8-52e6a531afff">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="emp" class="java.lang.Integer"/>
+	<parameter name="start_date" class="java.util.Date"/>
+	<parameter name="end_date" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[select e.fname, e.lname, count(t.ticket_id), t.type, sum(w2.w_count) as emp_count
+from employee e, customer_problem p, ticket t
+join
+	(select count(*) as w_count, w1.ticket_id from work_on w1 group by w1.ticket_id) as w2
+on w2.ticket_id = t.ticket_id
+where e.emp_id = p.emp_id and p.problem_id = t.problem_id
+	and e.emp_id = $P{emp} and p.review_date >= $P{start_date}
+	and p.review_date <= $P{end_date}
+group by t.type, e.fname, e.lname 
+order by fname;]]>
+	</queryString>
+	<field name="fname" class="java.lang.String"/>
+	<field name="lname" class="java.lang.String"/>
+	<field name="count" class="java.lang.Long"/>
+	<field name="type" class="java.lang.Object"/>
+	<field name="emp_count" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="135" y="0" width="55" height="20" uuid="4d36163e-3412-49ea-ae6b-bf91fe98328b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="91" height="20" uuid="8233ca6d-3f52-472d-8c24-e64db534da05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="20" uuid="4a77e8e9-2337-4089-b63f-658e8e7b12cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{emp_count}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

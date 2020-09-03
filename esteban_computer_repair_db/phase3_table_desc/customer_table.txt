@@ -1,0 +1,24 @@
+                                       Table "public.customer"
+  Column  |         Type          | Collation | Nullable |                  Default                  
+----------+-----------------------+-----------+----------+-------------------------------------------
+ cust_id  | integer               |           | not null | nextval('customer_cust_id_seq'::regclass)
+ username | character varying(50) |           |          | 
+ password | character varying(50) |           | not null | 
+ fname    | character varying(50) |           | not null | 
+ minit    | character varying(1)  |           |          | 
+ lname    | character varying(50) |           | not null | 
+ address  | character varying(50) |           | not null | 
+ city     | character varying(50) |           | not null | 
+ state    | character varying(2)  |           | not null | 
+ zip      | character varying(5)  |           | not null | 
+ phone    | character varying(12) |           | not null | 
+ email    | character varying(50) |           | not null | 
+Indexes:
+    "customer_pkey" PRIMARY KEY, btree (cust_id)
+    "customer_email_key" UNIQUE CONSTRAINT, btree (email)
+    "customer_username_key" UNIQUE CONSTRAINT, btree (username)
+    "idx_customer_fname" btree (fname)
+    "idx_customer_lname" btree (lname)
+Referenced by:
+    TABLE "equipment" CONSTRAINT "equipment_cust_id_fkey" FOREIGN KEY (cust_id) REFERENCES customer(cust_id) ON UPDATE CASCADE ON DELETE CASCADE
+

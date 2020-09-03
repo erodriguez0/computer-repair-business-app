@@ -1,0 +1,18 @@
+ cust_id |  username   |   password   |  fname  | minit |   lname   |        address         |      city       | state |  zip  |    phone     |       email       
+---------+-------------+--------------+---------+-------+-----------+------------------------+-----------------+-------+-------+--------------+-------------------
+       1 | fcelloni0   | CE3kzGu      | Falito  | Y     | Celloni   | 7 5th Street           | Dallas          | TX    | 75353 | 214-872-7789 | falito@gmail.com
+       2 | bhassell1   | cBrBN2zgo    | Budd    |       | Hassell   | 189 Evergreen Junction | Las Vegas       | NV    | 89145 | 702-575-7544 | budd@gmail.com
+       3 | cgecke2     | 7b3ouFfNf    | Conney  |       | Gecke     | 67571 Brown Place      | Rochester       | NY    | 14604 | 585-623-2940 | conney@gmail.com
+       4 | sforsbey3   | 2KEnlXb3mWF  | Suzi    | V     | Forsbey   | 6 Fallview Terrace     | Bronx           | NY    | 10474 | 718-287-4748 | major@gmail.com
+       5 | mtanslie4   | 9dYr5uAURB   | Major   |       | Tanslie   | 9421 Homewood Avenue   | New York City   | NY    | 10150 | 212-978-5925 | tanslie@gmail.com
+       6 | dcamblin5   | E68Dds       | Darice  |       | Camblin   | 559 Meadow Ridge Place | North Hollywood | CA    | 91616 | 213-620-0410 | darice@gmail.com
+       7 | bmaceveley6 | x0p6SzGM     | Babara  | K     | MacEveley | 7 Sloan Place          | Arlington       | TX    | 76096 | 214-909-5107 | babara@gmail.com
+       8 | mdorn7      | eWKdDYfa     | John    |       | Doe       | 66824 Glendale Drive   | Bakersfield     | CA    | 93305 | 661-783-9461 | john@gmail.com
+       9 | hsidery8    | ZQdWYdcmj    | Hersch  |       | Sidery    | 25 Evergreen Drive     | Dallas          | TX    | 75205 | 469-983-9782 | hersch@gmail.com
+      10 | pparfett9   | 06lORwWKiLv  | Philly  |       | Parfett   | 4 Memorial Terrace     | Pomona          | CA    | 91797 | 909-861-7093 | philly@gmail.com
+      11 | ecoxwella   | sRyVnyYySK   | Ethelda | B     | Coxwell   | 299 Sullivan Terrace   | San Francisco   | CA    | 94164 | 415-836-3583 | ethelda@gmail.com
+      12 | mpoynerb    | MDcRhCxAjU0Z | Miran   |       | Poyner    | 1 Homewood Place       | San Jose        | CA    | 95133 | 408-599-2796 | miran@gmail.com
+      13 | ebertsonc   | 0AbnnD2D     | Electra |       | Bertson   | 7 Granby Crossing      | Wichita Falls   | TX    | 76310 | 940-213-9407 | electra@gmail.com
+      14 | wmilned     | oJzYli       | Wilt    |       | Milne     | 7 Michigan Park        | Plano           | TX    | 75074 | 972-390-9153 | wilt@gmail.com
+(14 rows)
+

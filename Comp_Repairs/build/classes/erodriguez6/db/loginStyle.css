@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 16, 2018, 9:15:03 PM
+    Author     : esteban
+*/
+
+.text {
+    -fx-text-fill: #3b5998;
+}
+
+.errLabel {
+    -fx-text-fill: #ff0000;
+}
+
+.usrLabel, .pwdLabel {
+    -fx-font-weight: 400;
+}
+
+.mainLoginGP {
+    -fx-background-color: #ffffff;
+}
+
+.loginBtn {
+    -fx-font-size: 16px;
+    -fx-font-weight: 400;
+    /*-fx-padding: 5 10 5 10;*/
+    -fx-background-color: #3b5998;
+    -fx-text-fill: #ffffff;
+}
+
+.loginBtn:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #3b5998;
+    -fx-border-color: #3b5998;
+    -fx-border: 1px;
+}
+
+.text-field:focused {
+    -fx-focus-color: #3b5998;
+}
+
+.text-field {
+    -fx-font-size: 18px;
+}

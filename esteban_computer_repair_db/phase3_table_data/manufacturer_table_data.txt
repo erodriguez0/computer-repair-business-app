@@ -1,0 +1,20 @@
+ mnfr_id |            mnfr_name            |  mnfr_phone  |               mnfr_addr               |    mnfr_city     | mnfr_state | mnfr_zip 
+---------+---------------------------------+--------------+---------------------------------------+------------------+------------+----------
+       1 | COOLER MASTER CO.               | 408-432-4050 | 780 Montague EXPY STE 208             | San Jose         | CA         | 95131
+       2 | MICRO-STAR INTERNATIONAL        | 626-913-0828 | 901 Canada Court                      | City of Industry | CA         | 91478
+       3 | INTEL CORPORATION               | 408-765-8080 | 2200 Mission College Blvd.            | Santa Clara      | CA         | 95054
+       4 | ASUSTEK COMPUTER INC.           | 510-739-3777 | 800 Corporate Way                     | Fremont          | CA         | 94539
+       5 | EVGA CORP                       | 714-528-4500 | 408 Saturn St                         | Brea             | CA         | 92821
+       6 | GIGABYTE TECHNOLOGY             | 626-854-9338 | 17358 Railroad St                     | City of Industry | CA         | 91748
+       7 | ADVANCED MICRO DEVICES          | 408-749-4000 | 2485 Augustine Drive                  | Santa Clara      | CA         | 95405
+       8 | WESTERN DIGITAL                 | 408-717-6000 | 5601 Great Oaks Parkway               | San Jose         | CA         | 95119
+       9 | CORSAIR COMPONENTS INC.         | 408-717-6000 | 47100 Bayside Parkway                 | Fremont          | CA         | 94538
+      10 | SEASONIC ELECTRONICS INC.       | 626-969-9966 | 1330 Mountain View Circle, BLDG F     | Azusa            | CA         | 91702
+      11 | SAMSUNG ELECTRONICS INC         | 201-229-4000 | 85 Challenger Road                    | Ridgefield Park  | NJ         | 07660
+      12 | SEAGATE TECHNOLOGY              | 408-658-1000 | 10200 S De Anza Blvd                  | Cupertino        | CA         | 95014
+      13 | ADATA TECHNOLOGY                | 714-332-8708 | 880 Columbia St.                      | Brea             | CA         | 92821
+      14 | GOLDEN EMPEROR INTERNATION LTD. | 909-843-6547 | 20955 Pathfinder Road Suite 100       | Diamond Bar      | CA         | 91765
+      15 | HEWLETT-PACKARD                 | 858-655-4100 | 16399 Bernardo Center Dr #66          | San Diego        | CA         | 92127
+      16 | ACER CORPORATION AMERICA        | 408-533-7700 | 333 West San Carlos Street Suite 1500 | San Jose         | CA         | 95110
+(16 rows)
+

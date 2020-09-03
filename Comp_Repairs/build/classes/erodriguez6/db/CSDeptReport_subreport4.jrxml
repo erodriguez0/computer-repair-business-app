@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CSDeptReport_subreport3" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="61939a32-5448-4dd1-80fe-106129209cd0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="problem_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from subreport_4 where problem_id = $P{problem_id}
+order by part_id;]]>
+	</queryString>
+	<field name="problem_id" class="java.lang.Integer"/>
+	<field name="ticket_id" class="java.lang.Integer"/>
+	<field name="part_id" class="java.lang.Integer"/>
+	<field name="mnfr_name" class="java.lang.String"/>
+	<field name="model_name" class="java.lang.String"/>
+	<field name="serial_num" class="java.lang.String"/>
+	<field name="part_price" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="22" forecolor="#FFFFFF" backcolor="#8B9DC3" uuid="013c71d2-45d1-4237-8824-557324c8f44b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="87" y="0" width="122" height="21" forecolor="#F0F0F0" backcolor="#3B5998" uuid="6a940f51-1dab-403f-9e95-eef58f34dced"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Manufacturer:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="1" width="110" height="21" forecolor="#FFFFFF" uuid="c948ebf0-5f96-4989-901e-ee98d028aa69"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Model:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="50" height="22" forecolor="#FFFFFF" uuid="b9431dc7-ad93-45b0-96ba-621bebdcbe77"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Part ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="99" height="21" forecolor="#FFFFFF" uuid="b7b6501b-5101-4555-99f2-4714f6184de5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Serial Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="46" height="21" forecolor="#FFFFFF" uuid="33c48192-c580-4a98-84f1-6d632e79236b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Price:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="238" y="0" width="126" height="20" uuid="ae38a060-06a6-4345-b0c1-083b6552c972"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{model_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="0" width="50" height="20" uuid="fbf72065-d811-46c9-9fa6-539b32dc0704"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{part_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="110" height="20" uuid="60dbb468-ebbf-4d20-8321-7c33c06d4f40"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{serial_num}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="485" y="0" width="46" height="20" uuid="44254f09-2afa-4d3c-83d0-ac7234d874f4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{part_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="0" width="151" height="20" uuid="fb79093f-d35b-4fad-b915-e152655b9d06"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mnfr_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

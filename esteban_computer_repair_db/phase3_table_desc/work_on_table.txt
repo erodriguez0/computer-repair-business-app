@@ -1,0 +1,14 @@
+                                  Table "public.work_on"
+   Column   |  Type   | Collation | Nullable |                  Default                   
+------------+---------+-----------+----------+--------------------------------------------
+ work_id    | integer |           | not null | nextval('work_on_work_id_seq'::regclass)
+ ticket_id  | integer |           | not null | nextval('work_on_ticket_id_seq'::regclass)
+ emp_id     | integer |           | not null | nextval('work_on_emp_id_seq'::regclass)
+ start_date | date    |           | not null | 
+ end_date   | date    |           |          | 
+Indexes:
+    "work_on_pkey" PRIMARY KEY, btree (work_id)
+Foreign-key constraints:
+    "work_on_emp_id_fkey" FOREIGN KEY (emp_id) REFERENCES employee(emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+    "work_on_ticket_id_fkey" FOREIGN KEY (ticket_id) REFERENCES ticket(ticket_id) ON UPDATE CASCADE ON DELETE CASCADE
+

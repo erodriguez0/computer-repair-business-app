@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20c97f69-74cb-46d2-9b86-ff5c96254f9e">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="532"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Documents\\NetBeansProjects\\Comp_Repairs\\src\\erodriguez6\\db\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="emp_id" class="java.lang.Integer"/>
+	<parameter name="start_date" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="end_date" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[select e.fname || ' ' || e.lname as emp_name, s.count, p.problem_id
+from customer_problem p,
+	employee e
+	JOIN
+		(select count(r.problem_id) as count, e1.emp_id as emp_id
+		from customer_problem r, employee e1 
+		where e1.emp_id = r.emp_id
+and r.review_date >= $P{start_date} and r.review_date <= $P{end_date}
+		group by e1.emp_id) as s
+	ON e.emp_id = s.emp_id
+where e.emp_id = p.emp_id and e.emp_id = $P{emp_id}
+	and p.review_date >= $P{start_date} and p.review_date <= $P{end_date}
+group by e.fname, e.lname, p.problem_id, s.count
+order by fname;]]>
+	</queryString>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="count" class="java.lang.Long"/>
+	<field name="problem_id" class="java.lang.Integer"/>
+	<variable name="problem_id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="575" height="115" forecolor="#3B5998" backcolor="#3B5998" uuid="a020f6a0-43f1-4a6f-ac30-64e0720f22e2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="49" y="25" width="347" height="42" forecolor="#FFFFFF" uuid="2b3500f7-949a-4d4d-93a7-d6749a184579"/>
+				<textElement verticalAlignment="Middle">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER SUPPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="67" width="203" height="24" forecolor="#FFFFFF" uuid="08710965-edc5-42bd-803e-d79cd0b62fe3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[INDIVIDUAL REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="64" backcolor="#DFE3EE" uuid="16af26f7-5e1a-49fd-a2cb-aaae3bd4eeeb"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="37" y="12" width="130" height="20" uuid="669e0fd5-0365-4211-9de5-6ddaf3757303">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEE NAME:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="49" y="32" width="100" height="20" uuid="c5f78680-8c96-464b-856f-94d3effc1b0d">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="12" width="124" height="20" uuid="eff6ab41-4913-4d8e-8b04-ce566767d1db">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WORK BETWEEN:]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="331" y="32" width="91" height="20" uuid="81d8fdf0-a82b-43e2-9618-438198ba3342">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{start_date}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="425" y="32" width="91" height="20" uuid="128d0d7b-2082-47d0-8f48-49ef3571f631">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{end_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="32" width="6" height="20" uuid="2fbf4f95-8611-453d-9326-bcf259ed7ef4">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<staticText>
+				<reportElement x="224" y="14" width="99" height="23" uuid="c6df5070-0a98-4594-8d7c-540b86dc7302">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[OVERVIEW]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="455" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<textField>
+				<reportElement x="96" y="15" width="23" height="20" uuid="168b4873-80db-472b-bef8-54b5b42d0bad">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="15" width="47" height="20" uuid="ef7603a4-888a-4f18-b828-d127619ea296">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="119" y="233" width="198" height="20" uuid="35e37426-7fb0-40b4-84f0-3c4a2cecdea5">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="end_date">
+					<subreportParameterExpression><![CDATA[$P{end_date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="emp">
+					<subreportParameterExpression><![CDATA[$P{emp_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="start_date">
+					<subreportParameterExpression><![CDATA[$P{start_date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "CSDept_stats_report_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="245" y="213" width="70" height="20" uuid="ab127f55-11b7-4cd0-bb3d-b815bb300af2">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[# OF TICKETS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="213" width="78" height="20" uuid="7bcb6c35-fdd5-40c5-9584-9472d9a049fd">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TICKET TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="55" width="142" height="20" uuid="893728c9-38d3-4665-895b-431ea912e3f9">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Requests:]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="114" y="115" width="214" height="20" uuid="1dd080de-c81e-4d10-80a6-b6c4e09c1762">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="end_date">
+					<subreportParameterExpression><![CDATA[$P{end_date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="emp_id">
+					<subreportParameterExpression><![CDATA[$P{emp_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="start_date">
+					<subreportParameterExpression><![CDATA[$P{start_date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "CSDept_stats_report_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="96" y="172" width="178" height="20" uuid="5b1049d7-d2bb-4a5e-9db4-5059b573dede">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From Requests Accepted:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="95" width="109" height="20" uuid="e854a4a2-ff89-425a-8f50-b80a15fe24fa">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REQUEST STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="95" width="100" height="20" uuid="d89c392c-9b0a-4b79-8056-edf41a6d71df">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[# OF REQUESTS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="315" width="235" height="20" uuid="f3218be6-0157-43e7-b15c-516455171f19"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Generated By Accepted Requests:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="213" width="106" height="20" uuid="4e03efd2-26ff-45a6-be95-2a7c41c161f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[# OF EMP. ASSIGNED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="15" width="133" height="20" uuid="51922637-5e9c-4aab-8881-cce8a3207ff1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Requests Reviewed]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="146" y="379" width="200" height="20" uuid="53a80e82-ae3e-4aa4-a648-cffb498e5aa0"/>
+				<subreportParameter name="emp_id">
+					<subreportParameterExpression><![CDATA[$P{emp_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "CSDept_stats_report_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="118" y="359" width="92" height="20" uuid="c359eec7-9210-4269-9a92-d1d25f9bbaff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL REVENUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="359" width="67" height="20" uuid="db978387-8b1f-4eed-b7f2-85d9a1f0119b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AVG / TICKET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="359" width="101" height="20" uuid="9d4ee9ca-8f11-49d3-ad3e-3b7b9e2fff00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL PARTS USED]]></text>
+			</staticText>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement x="-20" y="0" width="96" height="50" uuid="51662280-d3d1-4e73-aef7-440ec51afdf3"/>
+				<subreportParameter name="problem_id">
+					<subreportParameterExpression><![CDATA[$F{problem_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "CSDeptReport - Copy.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="16" width="100" height="20" uuid="78f2a80b-90fd-4dc2-8cca-84d7730fe617"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="367" y="16" width="88" height="20" uuid="c8a21bb4-d16c-4e44-94b6-451a608d86ef"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[GENERATED ON:]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

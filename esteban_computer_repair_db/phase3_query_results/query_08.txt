@@ -1,0 +1,8 @@
+ cust_id | username  |   password   |  fname  | minit |  lname  |       address        |     city      | state |  zip  |    phone     |       email       
+---------+-----------+--------------+---------+-------+---------+----------------------+---------------+-------+-------+--------------+-------------------
+      11 | ecoxwella | sRyVnyYySK   | Ethelda | B     | Coxwell | 299 Sullivan Terrace | San Francisco | CA    | 94164 | 415-836-3583 | ethelda@gmail.com
+      12 | mpoynerb  | MDcRhCxAjU0Z | Miran   |       | Poyner  | 1 Homewood Place     | San Jose      | CA    | 95133 | 408-599-2796 | miran@gmail.com
+      13 | ebertsonc | 0AbnnD2D     | Electra |       | Bertson | 7 Granby Crossing    | Wichita Falls | TX    | 76310 | 940-213-9407 | electra@gmail.com
+      14 | wmilned   | oJzYli       | Wilt    |       | Milne   | 7 Michigan Park      | Plano         | TX    | 75074 | 972-390-9153 | wilt@gmail.com
+(4 rows)
+

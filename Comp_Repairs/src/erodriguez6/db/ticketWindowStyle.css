@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2018, 11:32:22 PM
+    Author     : esteban
+*/
+
+.mainBP {
+    -fx-background-color: white;
+}
+
+.table-view .column-header, .table-view .column-header .label, .table-view .filler {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-font-weight: 400;
+}
+
+.table-view:focused  {
+    -fx-focus-color: #3b5998;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+    /*-fx-border-color: #3b5998;*/
+}
+
+.table-view .scroll-bar > .thumb {
+    -fx-background-color: #3b5998;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #3b5998;
+    -fx-border-color: #3b5998;
+}
+
+.button {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-focus-color: #3b5998;
+}
+
+/* Sort indicator on column header */
+.table-view /*> column-header-background > nested-column-header >*/ .arrow {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+   -fx-background-color: #3b5998; 
+}
+.table-row-cell:selected .text {
+       -fx-fill: white ;
+
+}
+
+.empName {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 20;
+}
+
+.empType, .empTickets {
+    -fx-alignment: CENTER;
+}
+
+/*.descText, .descText:focused, .descText:hover {
+    -fx-border-color: default;
+    -fx-focus-color: transparent; 
+    -fx-text-box-border: transparent;
+    
+}
+
+*/.text-area {
+    -fx-padding: 0;
+    -fx-font-size: 18px;
+    -fx-focus-color: #3b5998;
+}/*
+
+*/.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-padding: 0;
+
+}/*
+
+*/.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #3b5998;
+}/*
+
+*/.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: black;
+    -fx-highlight-fill: #3b5998;
+}
+
+.text-area > .scroll-pane {
+    /*-fx-background-color: white;*/
+}
+.text-area > .scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: white;
+}
+
+.text-area > .scroll-pane > .scroll-bar > .thumb {
+    -fx-background-color: #3b5998;
+}
+.text-area > .scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: white;
+}
+.text-area > .scroll-pane > .corner {
+    -fx-background-color: white;
+}
+
+.combo-box > .list-cell {
+    -fx-background: white;
+    /*-fx-background-color: white;*/
+    /*-fx-box-color: rgba(0,0,0,90);*/
+}
+
+.combo-box-base {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-focus-color: #3b5998;
+
+}
+
+.combo-box-base > .arrow-button {
+    /*-fx-background-color: white;*/
+    -fx-focus-color: #3b5998;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
+    -fx-background-color: #3b5998;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-cell-size: 50px;
+}
+
+.combo-box-popup .scroll-bar:horizontal, .combo-box-popup .scroll-pane > .corner ,
+.combo-box-popup  .scroll-bar:vertical {
+    -fx-background-color: white;
+}
+
+.combo-box-popup .scroll-bar:horizontal > .thumb ,
+.combo-box-popup  .scroll-bar:vertical > .thumb {
+    -fx-background-color: #3b5998;
+}

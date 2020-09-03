@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2018, 6:30:45 PM
+    Author     : esteban
+*/
+
+.mainBP {
+    -fx-background-color: white;
+}
+
+.titleGP {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-margin: 30 20 0 20;
+}
+
+.nameLabel2, .usernameLabel2, .rdateLabel2, .compIDLabel2,
+.nameLabel1, .usernameLabel1, .rdateLabel1, .compIDLabel1 {
+    -fx-text-fill: white;
+}
+
+.nameLabel1, .usernameLabel1, .rdateLabel1, .compIDLabel1 {
+    -fx-font-weight: 800;
+}
+
+.desc {
+    -fx-font-size: 20px;
+    -fx-text-fill: #3b5998;
+    -fx-font-weight: 800;
+}
+
+.descText, .descText:focused, .descText:hover {
+    -fx-border: none;
+    -fx-focus-color: transparent; 
+    -fx-text-box-border: transparent;
+    
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-padding: 0;
+    -fx-font-size: 18px;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-padding: 0;
+
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area > .scroll-pane {
+    -fx-background-color: white;
+}
+.text-area > .scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: white;
+}
+
+.text-area > .scroll-pane > .scroll-bar > .thumb {
+    -fx-background-color: #3b5998;
+}
+.text-area > .scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: white;
+}
+.text-area > .scroll-pane > .corner {
+    -fx-background-color: white;
+}
+
+.acceptBtn, .declineBtn, .acceptBtn:focused, .declineBtn:focused {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+}
+
+.acceptBtn:hover, .declineBtn:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #3b5998;
+    -fx-border-color: #3b5998;
+}

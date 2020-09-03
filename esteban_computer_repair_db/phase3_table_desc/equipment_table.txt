@@ -1,0 +1,17 @@
+                                        Table "public.equipment"
+   Column    |         Type          | Collation | Nullable |                  Default                   
+-------------+-----------------------+-----------+----------+--------------------------------------------
+ comp_id     | integer               |           | not null | nextval('equipment_comp_id_seq'::regclass)
+ cust_id     | integer               |           | not null | nextval('equipment_cust_id_seq'::regclass)
+ submit_date | date                  |           | not null | 
+ address     | character varying(50) |           | not null | 
+ city        | character varying(50) |           | not null | 
+ state       | character varying(2)  |           | not null | 
+ zip         | character varying(5)  |           | not null | 
+Indexes:
+    "equipment_pkey" PRIMARY KEY, btree (comp_id)
+Foreign-key constraints:
+    "equipment_cust_id_fkey" FOREIGN KEY (cust_id) REFERENCES customer(cust_id) ON UPDATE CASCADE ON DELETE CASCADE
+Referenced by:
+    TABLE "customer_problem" CONSTRAINT "customer_problem_comp_id_fkey" FOREIGN KEY (comp_id) REFERENCES equipment(comp_id) ON UPDATE CASCADE ON DELETE CASCADE
+

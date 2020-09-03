@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import erodriguez6.db.ManagerFXMLController?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.collections.*?>
+<?import java.net.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erodriguez6.db.ManagerFXMLController">
+    <stylesheets>
+        <URL value="@managerWindow.css"/>
+    </stylesheets>
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <top>
+        <TabPane prefHeight="916.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab id="empTab" text="Employees">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutY="1.0" prefHeight="760.0" prefWidth="900.0">
+                                    <children>
+                                        <GridPane alignment="CENTER" VBox.vgrow="ALWAYS">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.0" minWidth="10.0" prefWidth="391.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="509.0" minWidth="10.0" prefWidth="509.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="310.0" minHeight="0.0" prefHeight="90.0" vgrow="ALWAYS" />
+                                                <RowConstraints maxHeight="334.0" minHeight="10.0" prefHeight="205.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="334.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="401.0" minHeight="10.0" prefHeight="374.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <TableView fx:id="empTable" prefHeight="712.0" prefWidth="391.0" GridPane.rowIndex="1" GridPane.rowSpan="4">
+                                                    <columns>
+                                                        <TableColumn prefWidth="45.0" text="EID">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="empID"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="145.0" text="First Name">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="fName"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="40.0" text="M.I.">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="mInit"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="145.0" text="Last Name">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="lName"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                    </columns>
+                                                </TableView>
+                                                <ImageView fx:id="empImg" fitHeight="150.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                                    <image>
+                                                        <Image url="@def_emp_img.png" />
+                                                    </image>
+                                       <GridPane.margin>
+                                          <Insets top="32.0" />
+                                       </GridPane.margin>
+                                                </ImageView>
+                                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="152.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="0.0" prefWidth="59.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="162.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="162.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="53.0" minHeight="1.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="48.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label fx:id="numOfTickets" prefHeight="21.0" prefWidth="87.0" text="Total Tickets:" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="10.0" />
+                                             </GridPane.margin></Label>
+                                                        <Label fx:id="generatedAmount" text="Total Amount:" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="10.0" />
+                                             </GridPane.margin></Label>
+                                                        <Label fx:id="empNumOfTickets" text="Label" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                        <Label fx:id="moneyLabel" text="\$" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                        <Label fx:id="empGeneratedAmount" prefWidth="150" text="Label" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                                            <padding>
+                                                                <Insets left="10.0" />
+                                                            </padding>
+                                                        </Label>
+                                                      <Label fx:id="empNameLabel" alignment="CENTER" text="FIRST NAME LAST NAME" textAlignment="CENTER" visible="false" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                          <font>
+                                                              <Font name="Century Gothic" size="25.0" />
+                                                          </font>
+                                                      </Label>
+                                                    </children>
+                                                </GridPane>
+                                                <TableView fx:id="empTicketTable" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                    <columns>
+                                                        <TableColumn prefWidth="45.0" text="TID">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="tNum"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="120.0" text="Status">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="tStatus"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="120.0" text="Opened">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="beginDate"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="120.0" text="Closed">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="endDate"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                        <TableColumn prefWidth="60.0" text="">
+                                                            <cellValueFactory>
+                                                                <PropertyValueFactory property="button"/>
+                                                            </cellValueFactory>
+                                                        </TableColumn>
+                                                    </columns>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                                </TableView>
+                                                    <TextField fx:id="empSearch" maxWidth="-Infinity" prefHeight="31.0" prefWidth="198.0" promptText="Search Employees" GridPane.halignment="LEFT" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <GridPane prefHeight="37.0" prefWidth="499.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="75.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="203.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="221.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                              <Button fx:id="applyDate" mnemonicParsing="false" text="Apply" visible="false" GridPane.halignment="CENTER" />
+                                                              <DatePicker fx:id="beginDate" prefHeight="31.0" prefWidth="194.0" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                                              <DatePicker fx:id="endDate" prefHeight="31.0" prefWidth="196.0" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </HBox>
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab id="reportTab" text="Reports">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </top>
+</BorderPane>

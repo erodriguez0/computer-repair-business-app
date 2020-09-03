@@ -1,0 +1,14 @@
+                                        Table "public.part_info"
+   Column   |         Type          | Collation | Nullable |                   Default                   
+------------+-----------------------+-----------+----------+---------------------------------------------
+ model_id   | integer               |           | not null | nextval('part_info_model_id_seq'::regclass)
+ mnfr_id    | integer               |           | not null | nextval('part_info_mnfr_id_seq'::regclass)
+ model_name | character varying(50) |           | not null | 
+ part_type  | part_type             |           | not null | 
+Indexes:
+    "part_info_pkey" PRIMARY KEY, btree (model_id)
+Foreign-key constraints:
+    "part_info_mnfr_id_fkey" FOREIGN KEY (mnfr_id) REFERENCES manufacturer(mnfr_id) ON UPDATE CASCADE ON DELETE CASCADE
+Referenced by:
+    TABLE "part" CONSTRAINT "part_model_id_fkey" FOREIGN KEY (model_id) REFERENCES part_info(model_id) ON UPDATE CASCADE ON DELETE CASCADE
+

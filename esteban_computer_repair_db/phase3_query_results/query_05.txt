@@ -1,0 +1,8 @@
+ cust_id | username | password  | fname  | minit | lname  |       address        |    city     | state |  zip  |    phone     |      email       
+---------+----------+-----------+--------+-------+--------+----------------------+-------------+-------+-------+--------------+------------------
+       9 | hsidery8 | ZQdWYdcmj | Hersch |       | Sidery | 25 Evergreen Drive   | Dallas      | TX    | 75205 | 469-983-9782 | hersch@gmail.com
+       9 | hsidery8 | ZQdWYdcmj | Hersch |       | Sidery | 25 Evergreen Drive   | Dallas      | TX    | 75205 | 469-983-9782 | hersch@gmail.com
+       8 | mdorn7   | eWKdDYfa  | John   |       | Doe    | 66824 Glendale Drive | Bakersfield | CA    | 93305 | 661-783-9461 | john@gmail.com
+       8 | mdorn7   | eWKdDYfa  | John   |       | Doe    | 66824 Glendale Drive | Bakersfield | CA    | 93305 | 661-783-9461 | john@gmail.com
+(4 rows)
+

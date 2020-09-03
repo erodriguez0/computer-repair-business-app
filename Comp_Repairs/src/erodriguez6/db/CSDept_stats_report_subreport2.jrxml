@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CSDept_stats_report_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df3ff895-a79c-409d-8e71-605ed892a135">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="emp_id" class="java.lang.Integer"/>
+	<parameter name="start_date" class="java.util.Date"/>
+	<parameter name="end_date" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[select distinct e.fname || ' ' || e.lname as emp_name, count(p.problem_id), p.status
+from employee e, customer_problem p
+where e.emp_id = p.emp_id and e.emp_id = $P{emp_id} 
+	and p.review_date >= $P{start_date} and p.review_date <= $P{end_date}
+group by e.fname, e.lname, p.status
+order by status desc;]]>
+	</queryString>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="count" class="java.lang.Long"/>
+	<field name="status" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="166" y="0" width="100" height="20" uuid="8b7d3b57-1fbd-458d-99cd-381c0a4e6957"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d5f51436-a081-4442-91a4-d7dd2e4a5f41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

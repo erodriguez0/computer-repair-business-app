@@ -1,0 +1,6 @@
+ emp_id | super_id | fname | minit |  lname  |         address         | city | state |  zip  |    phone     |   bdate    |     ssn     |      jobtitle       
+--------+----------+-------+-------+---------+-------------------------+------+-------+-------+--------------+------------+-------------+---------------------
+      7 |          | Moshe |       | Cockrem | 2 Burning Wood Crossing | Taft | CA    | 93311 | 661-528-0140 | 1973-08-08 | 509-11-7349 | Hardware Specialist
+      7 |          | Moshe |       | Cockrem | 2 Burning Wood Crossing | Taft | CA    | 93311 | 661-528-0140 | 1973-08-08 | 509-11-7349 | Hardware Specialist
+(2 rows)
+

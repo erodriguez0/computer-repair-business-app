@@ -1,0 +1,20 @@
+                                           Table "public.ticket"
+    Column    |          Type          | Collation | Nullable |                  Default                   
+--------------+------------------------+-----------+----------+--------------------------------------------
+ ticket_id    | integer                |           | not null | nextval('ticket_ticket_id_seq'::regclass)
+ problem_id   | integer                |           | not null | nextval('ticket_problem_id_seq'::regclass)
+ status       | status_type            |           | not null | 
+ type         | ticket_type            |           | not null | 
+ description  | character varying(300) |           | not null | 
+ return_label | character varying(50)  |           |          | 
+ total_cost   | numeric(10,2)          |           |          | 0.00
+Indexes:
+    "ticket_pkey" PRIMARY KEY, btree (ticket_id)
+Check constraints:
+    "ticket_total_cost_check" CHECK (total_cost >= 0::numeric)
+Foreign-key constraints:
+    "ticket_problem_id_fkey" FOREIGN KEY (problem_id) REFERENCES customer_problem(problem_id) ON UPDATE CASCADE ON DELETE CASCADE
+Referenced by:
+    TABLE "part" CONSTRAINT "part_ticket_id_fkey" FOREIGN KEY (ticket_id) REFERENCES ticket(ticket_id) ON UPDATE CASCADE ON DELETE CASCADE
+    TABLE "work_on" CONSTRAINT "work_on_ticket_id_fkey" FOREIGN KEY (ticket_id) REFERENCES ticket(ticket_id) ON UPDATE CASCADE ON DELETE CASCADE
+

@@ -1,0 +1,16 @@
+                                           Table "public.customer_problem"
+    Column    |          Type          | Collation | Nullable |                       Default                        
+--------------+------------------------+-----------+----------+------------------------------------------------------
+ problem_id   | integer                |           | not null | nextval('customer_problem_problem_id_seq'::regclass)
+ comp_id      | integer                |           | not null | nextval('customer_problem_comp_id_seq'::regclass)
+ emp_id       | integer                |           | not null | nextval('customer_problem_emp_id_seq'::regclass)
+ examine_date | date                   |           |          | 
+ description  | character varying(300) |           | not null | 
+Indexes:
+    "customer_problem_pkey" PRIMARY KEY, btree (problem_id)
+Foreign-key constraints:
+    "customer_problem_comp_id_fkey" FOREIGN KEY (comp_id) REFERENCES equipment(comp_id) ON UPDATE CASCADE ON DELETE CASCADE
+    "customer_problem_emp_id_fkey" FOREIGN KEY (emp_id) REFERENCES employee(emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+Referenced by:
+    TABLE "ticket" CONSTRAINT "ticket_problem_id_fkey" FOREIGN KEY (problem_id) REFERENCES customer_problem(problem_id) ON UPDATE CASCADE ON DELETE CASCADE
+

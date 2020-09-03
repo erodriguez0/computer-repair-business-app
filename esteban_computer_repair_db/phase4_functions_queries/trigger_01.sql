@@ -1,0 +1,15 @@
+CREATE OR REPLACE FUNCTION did_update() 
+	RETURNS TRIGGER AS
+$BODY$
+BEGIN
+	UPDATE employees
+	SET did = NEW.did
+	WHERE did = OLD.did;
+	RETURN NEW;
+END
+$BODY$ LANGUAGE plpgsql;
+
+CREATE TRIGGER before_did_update BEFORE UPDATE 
+ON department
+FOR EACH ROW
+EXECUTE PROCEDURE did_update();

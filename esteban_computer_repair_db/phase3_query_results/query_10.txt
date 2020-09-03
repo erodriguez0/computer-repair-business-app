@@ -1,0 +1,17 @@
+ emp_id | super_id |   fname   | minit |    lname     |         address          |    city     | state |  zip  |    phone     |   bdate    |     ssn     |      jobtitle       
+--------+----------+-----------+-------+--------------+--------------------------+-------------+-------+-------+--------------+------------+-------------+---------------------
+      1 |        1 | Chiarra   |       | Cockayme     | 92519 Golf View Hill     | Bakersfield | CA    | 93305 | 661-630-8687 | 1982-02-01 | 457-92-4681 | Software Specialist
+      2 |          | Stern     |       | Ilyinski     | 756 Clarendon Pass       | Lamont      | CA    | 93309 | 661-611-0437 | 1984-08-05 | 653-54-9189 | Software Specialist
+      3 |          | Claudine  | Q     | Cant         | 9 Nova Crossing          | Bakersfield | CA    | 93303 | 661-404-4071 | 1970-04-08 | 574-90-5145 | Hardware Specialist
+      4 |          | Maurene   | O     | Eddowes      | 2 Sunbrook Terrace       | Bakersfield | CA    | 93307 | 661-308-6540 | 1988-03-31 | 257-01-7091 | Hardware Specialist
+      5 |          | Aidan     |       | Kyngdon      | 635 Elka Point           | Shafter     | CA    | 93312 | 661-895-2087 | 1975-01-07 | 855-53-7378 | Software Specialist
+      6 |        2 | Angeli    |       | Egarr        | 96 Kedzie Street         | Bakersfield | CA    | 93314 | 661-292-8161 | 1978-01-02 | 448-05-8083 | Software Specialist
+     10 |          | Dunstan   |       | Redgrove     | 0564 Fuller Pass         | Bakersfield | CA    | 93304 | 661-173-1731 | 1976-03-19 | 450-76-8487 | Hardware Specialist
+     11 |          | Kimberlyn |       | Bilbrey      | 504 Center Pass          | Taft        | CA    | 95160 | 661-485-9443 | 1987-03-24 | 687-60-0965 | Software Specialist
+     12 |          | Bobette   |       | de Juares    | 8346 Novick Point        | Tehachapi   | CA    | 93773 | 661-937-4187 | 1975-07-05 | 795-87-4426 | Hardware Specialist
+     13 |        3 | Enoch     |       | Ricciardelli | 8174 Spohn Parkway       | Shafter     | CA    | 90050 | 661-782-8210 | 1985-07-29 | 484-33-9491 | Software Specialist
+     14 |          | Glynda    |       | Farress      | 7 Ronald Regan Junction  | Delano      | CA    | 93305 | 661-334-9425 | 1982-11-27 | 479-93-5571 | Hardware Specialist
+     15 |          | Babara    | H     | Yegorev      | 8619 Messerschmidt Alley | Arvin       | CA    | 92612 | 661-853-1565 | 1983-10-18 | 732-11-7784 | Hardware Specialist
+     16 |          | Morgana   |       | Siddell      | 31993 Vermont Parkway    | Bakersfield | CA    | 93381 | 661-163-7432 | 1985-02-05 | 377-99-5466 | Software Specialist
+(13 rows)
+

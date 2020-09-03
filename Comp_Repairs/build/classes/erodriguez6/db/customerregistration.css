@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 10, 2018, 8:54:46 PM
+    Author     : esteban
+*/
+.mainBP {
+    -fx-background-color: white;
+}
+
+.submitBtn:hover, .cancelBtn:hover, .cancelBtn:focused {
+    -fx-background-color: white;
+    -fx-text-fill: #3b5998;
+    -fx-border-color: #3b5998;
+}
+
+.submitBtn, .cancelBtn {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-border-color: #3b5998;
+}
+
+/*.cancelBtn:hover, .cancelBtn:focused {
+    -fx-background-color: white;
+    -fx-text-fill: red;
+    -fx-border-color: red;
+}
+.cancelBtn {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-border-color: red;
+}*/
+
+.text-field {
+    -fx-focus-color: grey;
+}
+
+.text-field:focused, .date-picker:focused > .text-field, .date-picker > .text-field:focused {
+    -fx-focus-color: #3b5998;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #3b5998;
+}
+
+/*.check-box:selected .mark {
+    -fx-background-color: white;
+    -fx-border-color: #3b5998;
+}*/
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #3b5998;
+}
+
+.text-area {
+    -fx-padding: 0;
+    -fx-font-size: 15px;
+    /*-fx-border-color: black;*/
+    -fx-focus-color: #3b5998;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-padding: 0;
+
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #3b5998;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: black;
+    -fx-highlight-fill: #3b5998;
+}
+
+.text-area > .scroll-pane {
+    /*-fx-background-color: white;*/
+}
+.text-area > .scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: white;
+}
+
+.text-area > .scroll-pane > .scroll-bar > .thumb {
+    -fx-background-color: #3b5998;
+}
+.text-area > .scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: white;
+}
+.text-area > .scroll-pane > .corner {
+    -fx-background-color: white;
+}

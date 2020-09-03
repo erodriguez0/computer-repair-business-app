@@ -1,0 +1,5 @@
+ cust_id | username | password | fname | minit | lname |     address      |    city    | state |  zip  |    phone     |     email      
+---------+----------+----------+-------+-------+-------+------------------+------------+-------+-------+--------------+----------------
+      17 | jdoe     | Udx90zC  | John  |       | Doe   | 075 Lunder Drive | Fort Worth | TX    | 76175 | 682-984-1750 | jdoe@gmail.com
+(1 row)
+

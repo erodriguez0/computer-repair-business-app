@@ -1,0 +1,26 @@
+                                      Table "public.employee"
+  Column  |         Type          | Collation | Nullable |                 Default                  
+----------+-----------------------+-----------+----------+------------------------------------------
+ emp_id   | integer               |           | not null | nextval('employee_emp_id_seq'::regclass)
+ super_id | integer               |           |          | 
+ fname    | character varying(50) |           | not null | 
+ minit    | character varying(1)  |           |          | 
+ lname    | character varying(50) |           | not null | 
+ address  | character varying(50) |           | not null | 
+ city     | character varying(50) |           | not null | 
+ state    | character varying(2)  |           | not null | 
+ zip      | character varying(5)  |           | not null | 
+ phone    | character varying(12) |           | not null | 
+ bdate    | date                  |           | not null | 
+ ssn      | character varying(11) |           | not null | 
+ jobtitle | character varying(19) |           | not null | 
+Indexes:
+    "employee_pkey" PRIMARY KEY, btree (emp_id)
+    "employee_ssn_key" UNIQUE CONSTRAINT, btree (ssn)
+    "employee_super_id_key" UNIQUE CONSTRAINT, btree (super_id)
+    "idx_employee_fname" btree (fname)
+    "idx_employee_lname" btree (lname)
+Referenced by:
+    TABLE "customer_problem" CONSTRAINT "customer_problem_emp_id_fkey" FOREIGN KEY (emp_id) REFERENCES employee(emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+    TABLE "work_on" CONSTRAINT "work_on_emp_id_fkey" FOREIGN KEY (emp_id) REFERENCES employee(emp_id) ON UPDATE CASCADE ON DELETE CASCADE
+

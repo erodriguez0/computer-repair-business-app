@@ -1,0 +1,7 @@
+ cust_id | username  |   password   | fname  | minit |  lname  |      address       |    city    | state |  zip  |    phone     |      email       
+---------+-----------+--------------+--------+-------+---------+--------------------+------------+-------+-------+--------------+------------------
+      12 | mpoynerb  | MDcRhCxAjU0Z | Miran  |       | Poyner  | 1 Homewood Place   | San Jose   | CA    | 95133 | 408-599-2796 | miran@gmail.com
+      17 | jdoe      | Udx90zC      | John   |       | Doe     | 075 Lunder Drive   | Fort Worth | TX    | 76175 | 682-984-1750 | jdoe@gmail.com
+      10 | pparfett9 | 06lORwWKiLv  | Philly |       | Parfett | 4 Memorial Terrace | Pomona     | CA    | 91797 | 909-861-7093 | philly@gmail.com
+(3 rows)
+

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import erodriguez6.db.CompRepairFXMLController?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erodriguez6.db.CompRepairFXMLController">
+   <top>
+      <TabPane prefHeight="773.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Tickets">
+               <content>
+                  <GridPane prefHeight="590.0" prefWidth="1280.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="634.0" minWidth="10.0" prefWidth="333.6666564941406" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="978.0" minWidth="10.0" prefWidth="554.6666870117188" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="978.0" minWidth="10.0" prefWidth="552.3333129882812" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="310.0" minHeight="0.0" prefHeight="263.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="657.0" minHeight="10.0" prefHeight="214.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="657.0" minHeight="10.0" prefHeight="211.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="tTable" prefHeight="636.0" prefWidth="400.0" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                          <columns>
+                            <TableColumn prefWidth="50.0" text="Ticket">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="tNum"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="148.0" text="Status">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="tStatus"/>
+                                </cellValueFactory>
+                            </TableColumn>
+<!--                            <TableColumn prefWidth="40.0" text="Cost">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="tTotalCost"/>
+                                </cellValueFactory>
+                            </TableColumn>-->
+                          </columns>
+                        </TableView>
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea editable="false" prefHeight="288.0" prefWidth="830.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TableView fx:id="pTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                          <columns>
+                              <TableColumn prefWidth="76.0" text="Part">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="pNum"/>
+                                </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="275.0" text="Manufacturer">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="mNum"/>
+                                </cellValueFactory>
+                              </TableColumn>
+                              <!--<TableColumn minWidth="0.0" prefWidth="283.0" text="Model">-->
+                              <TableColumn prefWidth="237.0" text="Serial Number">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="sNum"/>
+                                </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="114.0" text="Price">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="pPrice"/>
+                                </cellValueFactory>
+                              </TableColumn>
+                              <!--<TableColumn prefWidth="106.0" text="Quantity" />-->
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="653.0" GridPane.columnIndex="1">
+                           <children>
+                              <GridPane prefHeight="80.0" prefWidth="723.0" HBox.hgrow="ALWAYS">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ComboBox prefHeight="31.0" prefWidth="298.0" promptText="BRAND" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <ComboBox prefHeight="31.0" prefWidth="310.0" promptText="MODEL" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <GridPane HBox.hgrow="ALWAYS">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.3333740234375" minWidth="10.0" prefWidth="108.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="325.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="111.6666259765625" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.6666259765625" minWidth="10.0" prefWidth="86.3333740234375" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ComboBox prefHeight="31.0" prefWidth="125.0" promptText="#" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <TextField prefHeight="31.0" prefWidth="10.0" promptText="SERIAL #" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <TextField promptText="PRICE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="112.0" text="ADD" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <GridPane HBox.hgrow="ALWAYS">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.3333282470703" minWidth="10.0" prefWidth="131.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.66666412353516" minWidth="10.0" prefWidth="202.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                      <buttons>
+                                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="154.0" text="UPDATE" />
+                                      </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </content>
+          </Tab>
+          <Tab text="Lookup">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Review">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Reports">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Export/Import">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+</BorderPane>
+

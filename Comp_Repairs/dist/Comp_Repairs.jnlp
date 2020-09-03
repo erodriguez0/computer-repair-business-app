@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Comp_Repairs.jnlp">
+  <information>
+    <title>Comp_Repairs</title>
+    <vendor>esteban</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Comp_Repairs.jar" size="215986" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.2.jar" size="231891" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="579408" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\ecj-4.6.1.jar" size="2440899" download="eager" />
+    <jar href="lib\groovy-2.4.15.jar" size="4684920" download="eager" />
+    <jar href="lib\itext-2.1.7.js6-20170307.125214-1.jar" size="1131479" download="eager" />
+    <jar href="lib\jasperreports-6.5.1.jar" size="5493900" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.5.1.jar" size="2478075" download="eager" />
+    <jar href="lib\jasperreports-functions-6.5.1.jar" size="32173" download="eager" />
+    <jar href="lib\joda-time-2.3.jar" size="581571" download="eager" />
+    <jar href="lib\postgresql-9.4.1209.jar" size="678049" download="eager" />
+    <jar href="lib\servlet-api.jar" size="93551" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Comp_Repairs" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="erodriguez6.db.CompRepairGUI"  name="Comp_Repairs" />
+  <update check="always"/>
+</jnlp>

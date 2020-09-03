@@ -1,0 +1,15 @@
+                                        Table "public.manufacturer"
+   Column   |         Type          | Collation | Nullable |                    Default                    
+------------+-----------------------+-----------+----------+-----------------------------------------------
+ mnfr_id    | integer               |           | not null | nextval('manufacturer_mnfr_id_seq'::regclass)
+ mnfr_name  | character varying(50) |           | not null | 
+ mnfr_phone | character varying(50) |           | not null | 
+ mnfr_addr  | character varying(50) |           | not null | 
+ mnfr_city  | character varying(50) |           | not null | 
+ mnfr_state | character varying(50) |           | not null | 
+ mnfr_zip   | character varying(50) |           | not null | 
+Indexes:
+    "manufacturer_pkey" PRIMARY KEY, btree (mnfr_id)
+Referenced by:
+    TABLE "part_info" CONSTRAINT "part_info_mnfr_id_fkey" FOREIGN KEY (mnfr_id) REFERENCES manufacturer(mnfr_id) ON UPDATE CASCADE ON DELETE CASCADE
+

@@ -1,0 +1,6 @@
+ comp_id | cust_id | submit_date |       address        |    city     | state |  zip  
+---------+---------+-------------+----------------------+-------------+-------+-------
+       8 |       8 | 2015-03-21  | 66824 Glendale Drive | Bakersfield | CA    | 93305
+      12 |      12 | 2015-03-25  | 29574 Donald Center  | Bakersfield | CA    | 93311
+(2 rows)
+

@@ -1,0 +1,35 @@
+ comp_id | cust_id | submit_date |        address         |      city       | state |  zip  
+---------+---------+-------------+------------------------+-----------------+-------+-------
+       1 |       1 | 2015-03-01  | 7 5th Street           | Dallas          | TX    | 75353
+       2 |       2 | 2015-03-03  | 189 Evergreen Junction | Las Vegas       | NV    | 89145
+       3 |       3 | 2015-03-04  | 67571 Brown Place      | Rochester       | NY    | 14604
+       4 |       4 | 2015-03-11  | 6 Fallview Terrace     | Bronx           | NY    | 10474
+       5 |       5 | 2015-03-14  | 9421 Homewood Avenue   | New York City   | NY    | 10150
+       6 |       6 | 2015-03-18  | 559 Meadow Ridge Place | North Hollywood | CA    | 91616
+       7 |       7 | 2015-03-19  | 7 Sloan Place          | Arlington       | TX    | 76096
+       8 |       8 | 2015-03-21  | 66824 Glendale Drive   | Bakersfield     | CA    | 93305
+       9 |       9 | 2015-03-22  | 25 Evergreen Drive     | Dallas          | TX    | 75205
+      10 |      10 | 2015-03-23  | 4 Memorial Terrace     | Pomona          | CA    | 91797
+      11 |      11 | 2015-03-24  | 36585 Village Point    | Austin          | TX    | 78749
+      12 |      12 | 2015-03-25  | 29574 Donald Center    | Bakersfield     | CA    | 93311
+      13 |      13 | 2015-03-27  | 94078 Thompson Center  | Fullerton       | CA    | 92640
+      14 |      14 | 2015-04-01  | 7 Brown Junction       | Pompano Beach   | FL    | 33069
+      15 |      15 | 2015-04-02  | 5598 Mallard Point     | Kansas City     | MO    | 64130
+      16 |      16 | 2015-04-04  | 0600 1st Terrace       | Fort Worth      | TX    | 76105
+      17 |       1 | 2015-04-05  | 7 Charing Cross Court  | Atlanta         | GA    | 30368
+      18 |       2 | 2015-04-06  | 8508 Meadow Vale Point | Honolulu        | HI    | 96850
+      19 |       3 | 2015-04-06  | 4 Gale Avenue          | Scranton        | PA    | 18505
+      20 |       4 | 2015-04-07  | 48663 Forest Terrace   | Portland        | OR    | 97216
+      21 |       5 | 2015-04-08  | 51 Reinke Crossing     | Wichita         | KS    | 67236
+      22 |       6 | 2015-04-12  | 092 Dixon Junction     | Phoenix         | AZ    | 85015
+      23 |       7 | 2015-04-12  | 27517 Mayer Pass       | Detroit         | MI    | 48224
+      24 |       8 | 2015-04-13  | 9615 Westport Drive    | Omaha           | NE    | 68134
+      25 |       9 | 2015-04-15  | 1114 Scott Court       | El Paso         | TX    | 79923
+      26 |      10 | 2015-04-17  | 75045 School Place     | Fredericksburg  | VA    | 22405
+      27 |      11 | 2015-04-20  | 0 Debra Lane           | Rockford        | IL    | 61110
+      28 |      12 | 2015-04-22  | 57 Caliangt Alley      | North Hollywood | CA    | 91616
+      29 |      13 | 2015-04-22  | 2545 Pawling Crossing  | Chicago         | IL    | 60646
+      30 |      14 | 2015-04-22  | 8682 Butternut Circle  | Lynchburg       | VA    | 24503
+      31 |      17 | 2015-04-24  | 075 Lunder Drive       | Fort Worth      | TX    | 76175
+(31 rows)
+

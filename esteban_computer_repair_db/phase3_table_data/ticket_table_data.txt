@@ -1,0 +1,35 @@
+ ticket_id | problem_id |   status    | type  |                                    description                                     |        return_label        | total_cost 
+-----------+------------+-------------+-------+------------------------------------------------------------------------------------+----------------------------+------------
+         1 |          1 | COMPLETED   | HW    | Customer's computer shows sign of a faulty PSU and would need a new one            | 92748927005044000024814361 |     338.35
+         2 |          2 | COMPLETED   | SW    | The computer is infected with multiple viruses and may need to be reset completely | 92748927005044000024437102 |     196.07
+         3 |          3 | COMPLETED   | HW    | The PC has an issue where the motherboard doesn't detect USB devices at random     | 92748927005044000024252798 |      89.20
+         4 |          4 | COMPLETED   | HW    | Faulty hard drive most likely but further testing will be needed                   | 4287211434                 |     496.04
+         5 |          5 | COMPLETED   | HW    | GPU seems to be showing artifacts on screen and is possibly fried                  | 771895917324               |     445.65
+         6 |          6 | COMPLETED   | SW/HW | PC doesn't turn on every time;may need  a new OS if corrupt                        | 92748927005044000023863728 |      76.83
+         7 |          7 | COMPLETED   | SW/HW | Computer is infected with ransomware and needs to be wiped                         | 17430181071743018106       |      51.24
+         8 |          8 | COMPLETED   | HW    | Customer's computer shows sign of a faulty PSU and would need a new one            | 1Z5100XF0350976013         |     190.35
+         9 |          9 | COMPLETED   | SW    | The computer is infected with multiple viruses and may need to be reset completely | 1Z4725280368586730         |      60.01
+        10 |         10 | COMPLETED   | HW    | The PC has an issue where the motherboard doesn't detect USB devices at random     | 96110192807178001192       |     281.75
+        11 |         11 | COMPLETED   | HW    | Faulty hard drive most likely but further testing will be needed                   | 92612927005044000023404598 |     154.37
+        12 |         12 | COMPLETED   | HW    | GPU seems to be showing artifacts on screen and is possibly fried                  | 1ZY6Y235YW06371676         |     447.75
+        13 |         13 | COMPLETED   | SW/HW | PC doesn't turn on every time;may need  a new OS if corrupt                        | 92748927005044000024256208 |     458.76
+        14 |         14 | COMPLETED   | SW/HW | Computer is infected with ransomware and needs to be wiped                         | 92748927005044000024318548 |     371.10
+        15 |         15 | COMPLETED   | SW    | Customer's computer shows sign of a faulty PSU and would need a new one            | 9261292700504400024404917  |     368.44
+        16 |         16 | COMPLETED   | SW    | The computer is infected with multiple viruses and may need to be reset completely | 9534610591348093217344     |     277.16
+        17 |         17 | COMPLETED   | HW    | The PC has an issue where the motherboard doesn't detect USB devices at random     | 92612927005044000024795497 |     120.06
+        18 |         18 | COMPLETED   | HW    | Faulty hard drive most likely but further testing will be needed                   | 92612927005044000024427251 |     400.16
+        19 |         19 | COMPLETED   | HW    | GPU seems to be showing artifacts on screen and is possibly fried                  | 92612927005044000024710803 |     604.34
+        20 |         20 | COMPLETED   | SW/HW | PC doesn't turn on every time;may need  a new OS if corrupt                        | 1ZW6253X0392178187         |     400.66
+        21 |         21 | COMPLETED   | SW    | Computer is infected with ransomware and needs to be wiped                         | 92748927005044000024631494 |     288.44
+        22 |         22 | COMPLETED   | SW    | Customer's computer shows sign of a faulty PSU and would need a new one            | 92612927005044000024120336 |     113.38
+        23 |         23 | COMPLETED   | SW    | The computer is infected with multiple viruses and may need to be reset completely | 9400115902256340284894     |     261.32
+        24 |         24 | IN PROGRESS | HW    | The PC has an issue where the motherboard doesn't detect USB devices at random     |                            |     333.49
+        25 |         25 | IN PROGRESS | HW    | Faulty hard drive most likely but further testing will be needed                   |                            |     400.47
+        26 |         26 | IN PROGRESS | HW    | GPU seems to be showing artifacts on screen and is possibly fried                  |                            |     801.48
+        27 |         27 | IN PROGRESS | SW/HW | PC doesn't turn on every time;may need  a new OS if corrupt                        |                            |     412.18
+        28 |         28 | IN PROGRESS | SW    | Computer is infected with ransomware and needs to be wiped                         |                            |     151.58
+        29 |         29 | OPEN        | HW    | Customer's computer shows sign of a faulty PSU and would need a new one            |                            |     215.27
+        30 |         30 | OPEN        | SW    | The computer is infected with multiple viruses and may need to be reset completely |                            |     422.02
+        31 |         31 | IN PROGRESS | HW/SW | GPU seems to be showing artifacts on screen and is possibly fried                  |                            |     622.02
+(31 rows)
+

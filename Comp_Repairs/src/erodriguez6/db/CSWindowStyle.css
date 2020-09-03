@@ -1,0 +1,125 @@
+/* 
+    Created on : Apr 18, 2018, 7:41:15 PM
+    Author     : esteban
+*/
+
+.mainBP {
+    -fx-background-color: white;
+}
+
+.text-field:focused, .date-picker:focused > .text-field, .date-picker > .text-field:focused, 
+.date-picker > .arrow-button:focused, .date-picker:focused > .arrow-button,
+.button:focused {
+    -fx-focus-color: #3b5998;
+    /*-fx-border-color: #3b5998;*/
+    /*-fx-faint-focus-color: #0000ff;*/
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3b5998;
+    -fx-border: none;
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+.table-view .column-header, .table-view .column-header .label, .table-view .filler {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-font-weight: 400;
+}
+
+.table-view:focused  {
+    -fx-focus-color: transparent;
+}
+
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+    /*-fx-border-color: #3b5998;*/
+}
+
+.table-view .scroll-bar > .thumb {
+    -fx-background-color: #3b5998;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #3b5998;
+    -fx-border-color: #3b5998;
+}
+
+.button {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+    -fx-border-color: #3b5998;
+}
+
+/* Sort indicator on column header */
+.table-view /*> column-header-background > nested-column-header >*/ .arrow {
+    -fx-background-color: white;
+}
+
+.problemID, .submit, .reviewed {
+    -fx-alignment: CENTER;
+}
+
+.fname, .lname, .username {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 20;
+}
+
+.date-picker-popup > * > .today:hover,
+.date-picker-popup > * > .today.selected,
+.date-picker-popup > * > .day-cell:focused,
+.date-picker-popup > * > .today:focused,
+.date-picker-popup > * > .day-cell:focused:hover,
+.date-picker-popup > * > .today:focused:hover,
+.date-picker-popup > * > .selected:focused,
+.date-picker-popup > * > .today.selected:focused,
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .selected,
+.date-picker-popup > * > .previous-month.selected,
+.date-picker-popup > * > .next-month.selected,
+.date-picker-popup > .calendar-grid,
+.date-picker-popup > * > .day-name-cell {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup,
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: white;
+}
+
+/*.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow,*/
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: #3b5998;
+    -fx-border-left: 1;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: white;
+}
+
+.date-picker-popup > * > .week-number-cell {
+    -fx-text-fill: #3b5998;
+}
+/*.table-view .empty-table {
+    -fx-background-color: red;
+}*/
+
+.table-row-cell:selected {
+   -fx-background-color: #3b5998; 
+}
+.table-row-cell:selected .text {
+       -fx-fill: white ;
+
+}

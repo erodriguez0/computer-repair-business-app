@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CSDeptReport_subreport3" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="61939a32-5448-4dd1-80fe-106129209cd0">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="problem_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Documents\\NetBeansProjects\\Comp_Repairs\\src\\erodriguez6\\db\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from subreport_2 where problem_id = $P{problem_id}
+order by emp_name;]]>
+	</queryString>
+	<field name="ticket_id" class="java.lang.Integer"/>
+	<field name="emp_id" class="java.lang.Integer"/>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="jobtitle" class="java.lang.String"/>
+	<field name="problem_id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="22" forecolor="#FFFFFF" backcolor="#8B9DC3" uuid="013c71d2-45d1-4237-8824-557324c8f44b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="97" y="0" width="138" height="21" forecolor="#F0F0F0" backcolor="#3B5998" uuid="6a940f51-1dab-403f-9e95-eef58f34dced"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Assigned Employee:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="0" width="100" height="21" forecolor="#FFFFFF" uuid="c948ebf0-5f96-4989-901e-ee98d028aa69"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Job Position:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="67" height="22" forecolor="#FFFFFF" uuid="b9431dc7-ad93-45b0-96ba-621bebdcbe77"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[EID:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="97" y="0" width="138" height="20" uuid="fb79093f-d35b-4fad-b915-e152655b9d06"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="0" width="100" height="20" uuid="ae38a060-06a6-4345-b0c1-083b6552c972"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jobtitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="18" height="20" uuid="fbf72065-d811-46c9-9fa6-539b32dc0704"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{emp_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="21">
+			<subreport>
+				<reportElement x="0" y="0" width="200" height="20" uuid="b4613534-8830-4b0b-b4d8-2d3c25a5cb1f"/>
+				<subreportParameter name="problem_id">
+					<subreportParameterExpression><![CDATA[$F{problem_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "CSDeptReport_subreport4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

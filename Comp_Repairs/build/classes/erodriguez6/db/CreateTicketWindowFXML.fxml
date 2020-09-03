@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import erodriguez6.db.CreateTicketWindowFXMLController ?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.collections.*?>
+<?import java.net.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" 
+            minWidth="-Infinity" prefHeight="720.0" prefWidth="840.0" 
+            xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="erodriguez6.db.CreateTicketWindowFXMLController"
+            styleClass="mainBP">
+    
+    <stylesheets>
+        <URL value="@ticketWindowStyle.css" />
+    </stylesheets>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="456.0" minWidth="10.0" prefWidth="432.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="368.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="202.0" minHeight="7.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="267.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="258.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="63.0" minHeight="4.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+            <children>
+                <TableView fx:id="selectEmp" prefHeight="200.0" prefWidth="200.0" GridPane.rowSpan="3" styleClass="selectEmp">
+                    <columns>
+                        <TableColumn prefWidth="241.0" text="Employee" styleClass="empName">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="fName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="0.0" prefWidth="82.0" text="Tickets" styleClass="empTickets">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="ticketCount"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="88.0" text="Type" styleClass="empType">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="jobTitle"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <ComboBox prefHeight="31.0" prefWidth="432.0" promptText="SELECT TICKET TYPE" 
+                          GridPane.columnIndex="1" GridPane.valignment="TOP" fx:id="combo">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </ComboBox>
+                <TextArea fx:id="descArea" styleClass="descText" prefHeight="200.0" prefWidth="200.0" promptText="Enter ticket description..." GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </TextArea>
+                <Button fx:id="createBtn" mnemonicParsing="false" text="SUBMIT" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="-20.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="cancelBtn" mnemonicParsing="false" text="CANCEL" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="-20.0" left="93.0" />
+                    </GridPane.margin>
+                </Button>
+                <TableView fx:id="selectedEmp" styleClass="selectEmp" prefHeight="246.0" prefWidth="380.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn prefWidth="244.0" text="Employee" styleClass="empName">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="fName"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="85.0" text="Type" styleClass="empType">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="jobTitle"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                    </GridPane.margin>
+                </TableView>
+                <Label text="SELECTED EMPLOYEES" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" top="30.0" />
+                    </GridPane.margin>
+                </Label>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

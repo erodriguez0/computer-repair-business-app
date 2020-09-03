@@ -1,0 +1,6 @@
+ ticket_id | problem_id |  status   | type  |                            description                            |        return_label        | total_cost 
+-----------+------------+-----------+-------+-------------------------------------------------------------------+----------------------------+------------
+        19 |         19 | COMPLETED | HW    | GPU seems to be showing artifacts on screen and is possibly fried | 92612927005044000024710803 |     604.34
+        14 |         14 | COMPLETED | SW/HW | Computer is infected with ransomware and needs to be wiped        | 92748927005044000024318548 |     371.10
+(2 rows)
+

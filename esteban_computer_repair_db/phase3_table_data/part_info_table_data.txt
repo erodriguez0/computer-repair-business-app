@@ -1,0 +1,21 @@
+ model_id | mnfr_id |          model_name          | part_type 
+----------+---------+------------------------------+-----------
+        1 |       2 | X370 XPOWER GAMING TITANIUM  | MB
+        2 |       1 | MASTERWATT LITE 500          | PSU
+        3 |       3 | CORE I5-8600K                | CPU
+        4 |       6 | GTX 1050 TI G1 GAMING        | GPU
+        5 |       5 | GTX 1080 TI SC BLACK EDITION | GPU
+        6 |       4 | MAXIMUS VIII HERO            | MB
+        7 |      10 | M12II 520 BRONZE             | PSU
+        8 |       9 | RM850X                       | PSU
+        9 |      11 | 850 EVO 500GB                | SSD
+       10 |       7 | RYZEN 5 1600                 | CPU
+       11 |       7 | THREADRIPPER 1950X           | CPU
+       12 |       8 | CAVIAR BLUE 1TB              | HDD
+       13 |      16 | G257HL BMIDX                 | MONITOR
+       14 |      15 | SE2717HR                     | MONITOR
+       15 |      14 | SUPER LUCE RGB SYNC          | RAM
+       16 |      13 | XPG Z1                       | RAM
+       17 |      12 | BARRACUDA 3TB                | HDD
+(17 rows)
+
